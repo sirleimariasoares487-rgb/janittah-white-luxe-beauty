@@ -1,19 +1,38 @@
-JANITTAH WHITE LUXE BEAUTY
-===========================
-Design recreated from the supplied reference image.
+JANITTAH WHITE LUXE BEAUTY — VERSION 2
+==========================================
 
-Files:
-- index.html  — website structure/content
-- style.css   — luxury black + champagne/copper responsive design
-- script.js   — mobile navigation and WhatsApp booking request
+This package upgrades the existing GitHub Pages website into a secure-ready
+static frontend + Supabase database/admin system.
 
-IMPORTANT BEFORE PUBLISHING
-1. Replace the placeholder phone number in index.html and script.js with the salon's real number.
-2. Replace the social "#" links with the real Facebook, Instagram and TikTok URLs.
-3. Replace the CSS image placeholders with the salon's real photos when available.
-4. The booking form currently opens WhatsApp; a real database/admin booking system can be added next.
+PUBLIC WEBSITE
+- Luxury black + champagne/copper design retained.
+- No public phone number.
+- No public WhatsApp number.
+- No public social-contact links.
+- No public business email shown.
+- Appointment form collects the customer's name and email privately.
+- Support form collects name, email, subject, service and message.
 
-To publish with GitHub Pages:
-1. Upload index.html, style.css and script.js to the repository root.
-2. GitHub → Settings → Pages → Deploy from branch → main → /(root).
-3. Save and wait for the Pages URL to become available.
+ADMIN
+- admin.html is a private dashboard.
+- Supabase Authentication protects login.
+- profiles.is_admin controls authorization.
+- Admin can view/update appointment status.
+- Admin can view/update support message status.
+
+FILES
+- index.html
+- style.css
+- script.js
+- config.js
+- admin.html
+- admin.css
+- admin.js
+- supabase_schema.sql
+- SUPABASE_SETUP.md
+
+IMPORTANT
+Do not put a Supabase secret/service-role key in config.js.
+Only use the project's publishable/anon browser key.
+
+GitHub Pages hosts the frontend. Supabase stores the customer requests.

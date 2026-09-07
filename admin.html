@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Janittah White Luxe Beauty — Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="loginView" class="center">
+  <div class="login-card">
+    <div class="brand-mark">JW</div><div class="script">Luxe Beauty</div>
+    <h1>Admin Dashboard</h1><p>Private salon management area</p>
+    <form id="loginForm"><input id="loginEmail" type="email" required placeholder="Admin email"><input id="loginPassword" type="password" required placeholder="Password"><button>Sign in</button></form>
+    <p id="loginMessage" class="message"></p>
+    <a href="index.html">← Return to website</a>
+  </div>
+</div>
+<div id="appView" hidden>
+<header><div><span class="brand-mark small">JW</span><strong>JANITTAH WHITE <em>LUXE BEAUTY</em></strong></div><button id="logout">Sign out</button></header>
+<main>
+  <div class="top"><div><p class="eyebrow">PRIVATE DASHBOARD</p><h1>Salon Overview</h1></div><button id="refresh">Refresh</button></div>
+  <div class="stats"><div><span id="pendingCount">0</span><small>Pending bookings</small></div><div><span id="messageCount">0</span><small>Unread messages</small></div><div><span id="todayCount">0</span><small>Today's bookings</small></div></div>
+  <section><div class="section-title"><h2>Appointments</h2><select id="bookingFilter"><option value="all">All statuses</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="declined">Declined</option><option value="completed">Completed</option></select></div><div id="appointments" class="table-wrap"></div></section>
+  <section><div class="section-title"><h2>Support Messages</h2><select id="messageFilter"><option value="all">All messages</option><option value="unread">Unread</option><option value="read">Read</option><option value="replied">Replied</option></select></div><div id="messages" class="table-wrap"></div></section>
+</main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body></html>
