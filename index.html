@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Janittah White Luxe Beauty — premium beauty, wellness and self-care services.">
-  <title>Janittah White Luxe Beauty</title>
+  <meta name="description" content="Janittah White Luxe Beauty — premium hair, beauty, tattoo, waxing, nail and massage services.">
+  <meta name="theme-color" content="#050505">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Janittah White Luxe Beauty">
+  <meta property="og:description" content="Premium beauty, wellness and self-care services with secure online appointment requests.">
+  <meta property="og:url" content="https://sirleimariasoares487-rgb.github.io/janittah-white-luxe-beauty/">
+  <meta name="twitter:card" content="summary">
+  <title>Janittah White Luxe Beauty | Premium Beauty & Wellness</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
@@ -113,8 +120,8 @@
       <option>Hair Braiding & Styling</option><option>Make Up Services</option><option>Tattoo Services</option>
       <option>Waxing Services</option><option>Nail Tech Services</option><option>Massage Therapy</option>
     </select>
-    <input name="date" required type="date">
-    <input name="time" required type="time">
+    <input name="date" required type="date" aria-label="Preferred appointment date">
+    <input name="time" required type="time" aria-label="Preferred appointment time">
     <textarea name="message" rows="4" placeholder="Anything you'd like us to know?"></textarea>
     <button class="gold-btn" type="submit">SEND BOOKING REQUEST</button>
   </form>
@@ -150,6 +157,10 @@
   <div class="footer-script">Your Beauty.<br>Our Passion ♡</div>
   <div class="copyright">© 2026 Janittah White Luxe Beauty. All rights reserved.</div>
 </footer>
+<script>
+  const appointmentDate=document.querySelector('input[name="date"]');
+  if(appointmentDate){ appointmentDate.min=new Date().toISOString().slice(0,10); }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="script.js"></script>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+Sitemap: https://sirleimariasoares487-rgb.github.io/janittah-white-luxe-beauty/sitemap.xml
